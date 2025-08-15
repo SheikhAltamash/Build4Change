@@ -223,12 +223,10 @@ const Registration = () => {
               <div className="contact-item">
                 <h4>📞 Phone Support</h4>
                 <p>+91 7498399449</p>
-                <p className="muted">Available 24/7 before event</p>
               </div>
               <div className="contact-item">
                 <h4>📧 Email Support</h4>
                 <p>altamashsheikh077@gmail.com</p>
-                <p className="muted">Response within 2 hours</p>
               </div>
               <div className="contact-item">
                 <h4>💬 WhatsApp Group</h4>
@@ -238,7 +236,6 @@ const Registration = () => {
                 >
                   Join Group
                 </a>
-                <p className="muted">For real-time updates</p>
               </div>
             </div>
           </GlassCard>
