@@ -23,18 +23,10 @@ const Hero = () => {
               <br />
               Anjuman College of Engineering and Technology
             </p>
-            <div className="hero-buttons">
-              <Link to="/register" className="btn-primary">
-                Register Now
-              </Link>
-              <Link to="/problems" className="btn-secondary">
-                View Problems
-              </Link>
-            </div>
           </div>
           <div className="hero-visual">
             <div className="code-icon">
-              <span>{"<>"}</span>
+              <span className="span_hero">{"<>"}</span>
             </div>
           </div>
         </div>

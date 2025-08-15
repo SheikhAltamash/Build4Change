@@ -1,0 +1,92 @@
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.sponsor-card {
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.main-sponsor {
+  background: var(--glass-heavy);
+  border: 2px solid var(--accent);
+}
+
+.sponsor-category {
+  margin-bottom: 20px;
+}
+
+.sponsor-category .pill {
+  background: linear-gradient(135deg, var(--accent), var(--orange-secondary));
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px 16px;
+}
+
+.sponsor-logo {
+  max-height: 80px;
+  max-width: 200px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  filter: brightness(1.1);
+  border-radius: 0.5rem;
+}
+
+.sponsor-logo.large {
+  max-height: 120px;
+  max-width: 280px;
+}
+
+.college-sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.college-sponsors .sponsor-logo {
+  max-height: 60px;
+  margin-bottom: 0;
+}
+
+.sponsor-card h3 {
+  color: var(--accent);
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.sponsor-card h4 {
+  color: var(--text);
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sponsors-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .sponsor-card {
+    padding: 24px;
+  }
+  
+  .college-sponsors {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

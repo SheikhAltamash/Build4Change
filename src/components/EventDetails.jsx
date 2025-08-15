@@ -8,7 +8,7 @@ const EventDetails = () => {
       icon: "📅",
       title: "Date",
       value: "23 August 2025",
-      subtitle: "Friday",
+      subtitle: "Saturday",
     },
     {
       icon: "⏰",
@@ -19,8 +19,8 @@ const EventDetails = () => {
     {
       icon: "🏢",
       title: "Venue",
-      value: "Anjuman College",
-      subtitle: "Engineering & Technology",
+      value: "Anjuman College of Engineering & Technology",
+      subtitle: "Sadar, Nagpur",
     },
     {
       icon: "👥",

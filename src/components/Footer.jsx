@@ -1,33 +1,85 @@
 import React from "react";
-
+import "../styles/Footer.css"
 const Footer = () => {
   return (
-    <footer
-      style={{
-        background: "rgba(255, 255, 255, 0.1)",
-        backdropFilter: "blur(20px)",
-        padding: "40px 0",
-        marginTop: "auto",
-        borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-      }}
-    >
+    <footer className="site-footer">
       <div className="container">
-        <div
-          style={{
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-          }}
-        >
-          <div>
-            <h3>Build4Change Hackathon</h3>
-            <p>Organized by Krans Forum, CSE Department</p>
-            <p>Anjuman College of Engineering and Technology</p>
+        <div className="footer-content">
+          {/* Main Footer Content */}
+          <div className="footer-main">
+            <div className="footer-section">
+              <div className="footer-brand">
+                <h3 className="footer-title">
+                  Build<span className="accent">4</span>Change
+                </h3>
+                <p className="footer-subtitle">8-hour Innovation Hackathon</p>
+                <p className="footer-date">August 23, 2025</p>
+              </div>
+            </div>
+
+            <div className="footer-section">
+              <h4 className="footer-heading">Organized By</h4>
+              <div className="organizer-info">
+                <p>
+                  <strong>Krans Forum</strong>
+                </p>
+                <p>Computer Science & Engineering Department</p>
+                <p>Anjuman College of Engineering and Technology</p>
+                <div className="accreditation">
+                  <span className="pill">NAAC A++ Grade</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="footer-section">
+              <h4 className="footer-heading">Quick Links</h4>
+              <nav className="footer-nav">
+                <a href="#home">Home</a>
+                {/* <a href="#problems">Problem Statements</a> */}
+                <a href="#register">Register</a>
+                {/* <a href="#submit">Submit Project</a> */}
+              </nav>
+            </div>
+
+            <div className="footer-section">
+              <h4 className="footer-heading">Contact</h4>
+              <div className="contact-info">
+                <a
+                  href="mailto:info@anjumancollege.edu"
+                  className="contact-link"
+                >
+                  📧 altamashsheikh077@gmail.com
+                </a>
+                <a href="tel:+919876543210" className="contact-link">
+                  📞 +91 7498399449
+                </a>
+                     </div>
+            </div>
           </div>
-          <div style={{ opacity: 0.7 }}>
-            <p>© 2025 Build4Change. All rights reserved.</p>
-            <p>Contact: info@anjumancollege.edu | +91 9876543210</p>
+
+          {/* Sponsor Section */}
+         
+
+          {/* Footer Bottom */}
+          <div className="footer-bottom">
+            <div className="footer-bottom-content">
+              <p className="copyright">
+                © 2025 Build4Change Hackathon. All rights reserved.
+              </p>
+              <div className="footer-links">
+                <a href="#" className="footer-link">
+                  Privacy Policy
+                </a>
+                <span className="divider">•</span>
+                <a href="#" className="footer-link">
+                  Terms of Service
+                </a>
+                <span className="divider">•</span>
+                <a href="#" className="footer-link">
+                  Code of Conduct
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

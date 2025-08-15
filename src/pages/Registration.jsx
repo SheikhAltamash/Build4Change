@@ -182,52 +182,7 @@ const Registration = () => {
               </div>
             </div>
 
-            <div className="form-section">
-              <h2>Additional Information</h2>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Preferred Theme</label>
-                  <select
-                    name="preferredTheme"
-                    value={formData.preferredTheme}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select a theme</option>
-                    <option value="healthcare">Healthcare Innovation</option>
-                    <option value="education">Education Technology</option>
-                    <option value="environment">
-                      Environmental Sustainability
-                    </option>
-                    <option value="smartcity">Smart Cities</option>
-                    <option value="fintech">Financial Inclusion</option>
-                    <option value="social">Social Impact</option>
-                  </select>
-                </div>
-                <div className="form-group">
-                  <label>Experience Level</label>
-                  <select
-                    name="experience"
-                    value={formData.experience}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select experience level</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                  </select>
-                </div>
-              </div>
-              <div className="form-group">
-                <label>What do you expect from this hackathon?</label>
-                <textarea
-                  name="expectations"
-                  value={formData.expectations}
-                  onChange={handleChange}
-                  rows="4"
-                  placeholder="Share your expectations..."
-                ></textarea>
-              </div>
-            </div>
+          
 
             <div className="form-actions">
               <button type="submit" className="btn-primary">
