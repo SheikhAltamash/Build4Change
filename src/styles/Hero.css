@@ -53,6 +53,7 @@
   opacity: 0.8;
   line-height: 1.5;
   color: #b8d4f0;
+
 }
 
 .hero-buttons {
@@ -123,17 +124,22 @@
   .hero {
     padding: 100px 0 60px;
   }
+  .hero-content{
+    margin-top:3rem !important;
+  }
 
   .hero-text h1 {
     font-size: 2.5rem;
   }
-
+.organizer-info{
+    font-size: 0.8rem !important;
+}
   .hero-text h2 {
-    font-size: 1.2rem;
+    font-size: 1rem ;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.8rem !important;
   }
 
   .hero-buttons {
