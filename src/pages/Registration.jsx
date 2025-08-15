@@ -231,7 +231,7 @@ const Registration = () => {
               <div className="contact-item">
                 <h4>💬 WhatsApp Group</h4>
                 <a
-                  href="https://chat.whatsapp.com/build4change"
+                  href="https://chat.whatsapp.com/FvV6RGds9ef9y36ccxxEaW?mode=ac_t"
                   className="btn ghost"
                 >
                   Join Group
