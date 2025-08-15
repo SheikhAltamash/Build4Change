@@ -17,13 +17,8 @@ const Navbar = () => {
             />
             <div className="brand-text">
               <h2>Build4Change</h2>
-              <p>8-hour Hackathon</p>
             </div>
-            <img
-              src="/images/nac.png"
-              alt="NAAC A++"
-              className="naac-logo"
-            />
+            
           </div>
 
           <button
@@ -37,12 +32,12 @@ const Navbar = () => {
             <Link to="/" onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
-            <Link to="/problems" onClick={() => setIsMenuOpen(false)}>
+            {/* <Link to="/problems" onClick={() => setIsMenuOpen(false)}>
               Problems
             </Link>
             <Link to="/submit" onClick={() => setIsMenuOpen(false)}>
               Submit
-            </Link>
+            </Link> */}
             <Link
               to="/register"
               className="register-btn"

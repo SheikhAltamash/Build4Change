@@ -26,7 +26,7 @@ const Footer = () => {
                 <p>Computer Science & Engineering Department</p>
                 <p>Anjuman College of Engineering and Technology</p>
                 <div className="accreditation">
-                  <span className="pill">NAAC A++ Grade</span>
+                  <span className="pill">NAAC A+ Grade</span>
                 </div>
               </div>
             </div>
@@ -34,9 +34,9 @@ const Footer = () => {
             <div className="footer-section">
               <h4 className="footer-heading">Quick Links</h4>
               <nav className="footer-nav">
-                <a href="#home">Home</a>
+                <a href="/home">Home</a>
                 {/* <a href="#problems">Problem Statements</a> */}
-                <a href="#register">Register</a>
+                <a href="/register">Register</a>
                 {/* <a href="#submit">Submit Project</a> */}
               </nav>
             </div>

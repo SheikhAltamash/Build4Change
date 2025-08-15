@@ -31,8 +31,7 @@ const EventDetails = () => {
     {
       icon: "💰",
       title: "Entry Fee",
-      value: "₹200 per team",
-      subtitle: "₹50 per person",
+      value: "₹300 per team",
     },
     {
       icon: "🏆",
