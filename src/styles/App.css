@@ -466,7 +466,9 @@ input::placeholder,textarea::placeholder{
   .hero h1{font-size:36px}
   .section-title{font-size:28px}
 }
-
+.hello{
+    display: none;
+}
 @media (max-width: 640px){
   .site-header{flex-direction:column;gap:12px;padding:16px}
   .grid.two,.grid.three,.grid.four{grid-template-columns:1fr}
@@ -477,4 +479,7 @@ input::placeholder,textarea::placeholder{
   .actions{flex-direction:column;width:100%}
   .btn{width:100%;justify-content:center}
   .code-icon{width:180px;height:180px;font-size:3rem}
+  .hello{
+    display: block;
+  }
 }

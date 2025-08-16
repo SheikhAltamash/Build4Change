@@ -22,7 +22,17 @@ const Hero = () => {
               Computer Science and Engineering Department
               <br />
               Anjuman College of Engineering and Technology
-            </p>
+            </p>{" "}
+            <div className="cta-buttons hello">
+              <a
+                href="https://forms.gle/yE9oVqDg7SLCEsYf9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn primary large"
+              >
+                Register Your Team
+              </a>
+            </div>
           </div>
           <div className="hero-visual">
             <div className="code-icon">
