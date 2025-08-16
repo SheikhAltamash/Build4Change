@@ -1,8 +1,13 @@
-/* Add this to the beginning of your CSS file */
+/* Critical fix for mobile white flash - Add at the very top */
 html {
   height: 100%;
   min-height: 100%;
+  background: #0a0f1c !important;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -12,11 +17,14 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   position: relative;
-  /* Remove background-attachment: fixed for mobile */
-  background: radial-gradient(1200px 800px at 20% -10%, #2a3554 0%, var(--blue-900) 55%), 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+  color: var(--text);
+  /* Single background declaration */
+  background: radial-gradient(1200px 800px at 20% -10%, #2a3554 0%, #0a0f1c 55%), 
               linear-gradient(135deg, #1a1f3a, #0a0f1c 70%);
-  /* Use scroll instead of fixed for mobile compatibility */
-  background-attachment: scroll;
+  background-attachment: scroll !important; /* Never use fixed on mobile */
 }
 
 #root {
@@ -25,63 +33,109 @@ body {
 }
 
 .app-root {
-  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #0a0f1c;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
+/* Hide scrollbars */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 
+/* iOS Safari specific fix */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    min-height: -webkit-fill-available !important;
+  }
+}
 
+/* Mobile specific fixes */
+@media screen and (max-width: 768px) {
+  html, body {
+    background: radial-gradient(1200px 800px at 20% -10%, #2a3554 0%, #0a0f1c 55%), 
+                linear-gradient(135deg, #1a1f3a, #0a0f1c 70%) !important;
+    background-attachment: scroll !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    width: 100%;
+    position: relative;
+  }
+  
+  .app-root {
+    min-height: -webkit-fill-available;
+    background: radial-gradient(1200px 800px at 20% -10%, #2a3554 0%, #0a0f1c 55%), 
+                linear-gradient(135deg, #1a1f3a, #0a0f1c 70%);
+  }
+
+  /* Prevent bounce scroll white flash */
+  body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent horizontal scroll */
+  * {
+    max-width: 100%;
+  }
+
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Rest of your CSS variables and styles remain the same */
 :root{
-  /* Updated color palette from your poster */
   --blue-900:#0a0f1c;
   --blue-800:#1a1f3a;
   --blue-700:#2a3554;
   --blue-600:#3a4a6e;
   --blue-500:#4a5a88;
-  
-  /* Primary orange accent from your poster */
   --orange-primary:#FF4757;
   --orange-secondary:#FF6348;
   --orange-light:#FF8A65;
-  
-  /* Glass and overlay effects */
   --glass-bg: rgba(42, 53, 84, 0.15);
   --glass-stroke: rgba(255, 255, 255, 0.18);
   --glass-heavy: rgba(42, 53, 84, 0.25);
-  
-  /* Text colors matching poster */
   --text:#FFFFFF;
   --text-secondary:#E8F4F8;
   --muted:#B8D4F0;
   --muted-dark:#8FA5C7;
-  
-  /* Accent colors from poster */
   --accent:#FF4757;
   --accent-blue:#6DDCFF;
-  
-  /* Shadows and effects */
   --shadow: 0 10px 30px rgba(10, 15, 28, 0.6);
   --shadow-heavy: 0 20px 60px rgba(10, 15, 28, 0.8);
   --radius:20px;
   --max:1100px;
 }
 
-*{box-sizing:border-box}
-
-html,body,#root{height:100%}
-
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
-  color:var(--text);
-  /* Background matching your poster's gradient */
-  background: radial-gradient(1200px 800px at 20% -10%, #2a3554 0%, var(--blue-900) 55%), 
-              linear-gradient(135deg, #1a1f3a, #0a0f1c 70%);
-  background-attachment: fixed;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  padding: 0 20px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Continue with your existing styles... */
+
 
 .app-root{min-height:100%;display:flex;flex-direction:column}
 
@@ -664,4 +718,40 @@ html {
 }
 .register-btn{
     box-shadow: none !important;
+}html {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  /* Remove background-attachment: fixed for mobile */
+  background: radial-gradient(1200px 800px at 20% -10%, #2a3554 0%, var(--blue-900) 55%), 
+              linear-gradient(135deg, #1a1f3a, #0a0f1c 70%);
+  /* Use scroll instead of fixed for mobile compatibility */
+  background-attachment: scroll;
+}
+
+.App {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #0a0f1c; /* Same as your background */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Mobile specific app root fixes */
+@media screen and (max-width: 768px) {
+  .App {
+    min-height: -webkit-fill-available;
+    background: radial-gradient(1200px 800px at 20% -10%, #2a3554 0%, #0a0f1c 55%), 
+                linear-gradient(135deg, #1a1f3a, #0a0f1c 70%);
+  }
 }
