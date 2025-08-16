@@ -7,8 +7,8 @@ const EventDetails = () => {
     {
       icon: "📅",
       title: "Date",
-      value: "23 August 2025",
-      subtitle: "Saturday",
+      value: "22 August 2025",
+      subtitle: "Friday",
     },
     {
       icon: "⏰",

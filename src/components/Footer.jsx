@@ -13,7 +13,7 @@ const Footer = () => {
                   Build<span className="accent">4</span>Change
                 </h3>
                 <p className="footer-subtitle">8-hour Innovation Hackathon</p>
-                <p className="footer-date">August 23, 2025</p>
+                <p className="footer-date">August 22, 2025</p>
               </div>
             </div>
 
@@ -31,15 +31,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="footer-section">
-              <h4 className="footer-heading">Quick Links</h4>
-              <nav className="footer-nav">
-                <a href="/home">Home</a>
-                {/* <a href="#problems">Problem Statements</a> */}
-                <a href="/register">Register</a>
-                {/* <a href="#submit">Submit Project</a> */}
-              </nav>
-            </div>
+       
 
             <div className="footer-section">
               <h4 className="footer-heading">Contact</h4>

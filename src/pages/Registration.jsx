@@ -13,7 +13,7 @@ const Registration = () => {
           </p>
           <div className="event-highlight">
             <span className="highlight-badge">8-Hour Innovation Challenge</span>
-            <span className="highlight-badge">August 23, 2025</span>
+            <span className="highlight-badge">August 22, 2025</span>
             <span className="highlight-badge">₹300 per team</span>
           </div>
         </div>
@@ -27,7 +27,7 @@ const Registration = () => {
             </p>
             <div className="cta-buttons">
               <a
-                href="https://forms.google.com/build4change-registration"
+                href="https://forms.gle/yE9oVqDg7SLCEsYf9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn primary large"
@@ -67,27 +67,9 @@ const Registration = () => {
                   <p>Start coding! Initial development phase</p>
                 </div>
               </div>
-              <div className="schedule-item">
-                <div className="time">11:00 AM</div>
-                <div className="activity">
-                  <h4>Code Push Deadline #1</h4>
-                  <p>Mandatory code submission - 2 hour checkpoint</p>
-                </div>
-              </div>
-              <div className="schedule-item">
-                <div className="time">1:00 PM</div>
-                <div className="activity">
-                  <h4>Code Push Deadline #2 & Lunch</h4>
-                  <p>Second code submission + networking and refreshments</p>
-                </div>
-              </div>
-              <div className="schedule-item">
-                <div className="time">3:00 PM</div>
-                <div className="activity">
-                  <h4>Code Push Deadline #3</h4>
-                  <p>Final development phase - last 2 hour checkpoint</p>
-                </div>
-              </div>
+          
+          
+              
               <div className="schedule-item">
                 <div className="time">5:00 PM</div>
                 <div className="activity">
