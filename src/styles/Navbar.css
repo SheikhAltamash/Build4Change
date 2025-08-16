@@ -60,7 +60,7 @@
   color: #e8f4f8;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   padding: 8px 16px;
   border-radius: 20px;
 }
@@ -103,7 +103,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(8, 24, 168, 0.588);
+   background: rgba(8, 24, 168, 0.2);
     backdrop-filter: blur(25px) saturate(180%);
     flex-direction: column;
     padding: 20px;
@@ -114,13 +114,16 @@
     visibility: hidden;
     transition: all 0.3s ease;
     border: 1px solid rgba(135, 206, 250, 0.2);
-    box-shadow: 0 8px 32px rgba(5, 10, 48, 0.4);
+    /* box-shadow: 0 8px 32px rgba(5, 10, 48, 0.4); */
   }
 
   .nav-links.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  -webkit-backdrop-filter: blur(35px) saturate(180%) !important;
+        backdrop-filter: blur(25px) saturate(180%) !important;
+
   }
 
   .brand-text h2 {
@@ -130,6 +133,9 @@
   .college-logo,
   .naac-logo {
     height: 40px;
+  }
+  .navM{       
+     backdrop-filter: blur(25px) saturate(180%) !important;
   }
   
 }
