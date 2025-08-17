@@ -30,7 +30,7 @@
 .naac-logo {
   height: 50px;
   width: auto;
-  filter: brightness(1.2) drop-shadow(0 2px 4px rgba(135, 206, 250, 0.3));
+  /* filter: brightness(1.2) drop-shadow(0 2px 4px rgba(135, 206, 250, 0.3)); */
 }
 
 .brand-text h2 {

@@ -1,6 +1,6 @@
 
 .sponsors-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: 2fr 1fr;
   gap: 24px;
   align-items: start;
@@ -35,8 +35,7 @@
 }
 
 .sponsor-logo {
-  max-height: 80px;
-  max-width: 200px;
+
   object-fit: contain;
   margin-bottom: 16px;
   filter: brightness(1.1);
@@ -44,8 +43,7 @@
 }
 
 .sponsor-logo.large {
-  max-height: 120px;
-  max-width: 280px;
+
 }
 
 .college-sponsors {
@@ -57,7 +55,7 @@
 }
 
 .college-sponsors .sponsor-logo {
-  max-height: 60px;
+  max-height: 100px;
   margin-bottom: 0;
 }
 
@@ -89,4 +87,20 @@
     flex-direction: column;
     gap: 12px;
   }
+}
+.sponsor-logo{
+width: 5rem !important;
+height: 5rem !important;
+border-radius: 1rem;
+}
+.sponserContainer{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  padding-top: 2rem !important;
+  flex-wrap: wrap;
+}
+.sponsor-card{
+  max-width: 400px;
 }

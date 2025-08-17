@@ -4,24 +4,32 @@ import "../styles/Sponsors.css"
 const Sponsors = () => {
   return (
     <section className="section">
-      <div className="container">
-        <h2 className="section-title">Our Sponsor</h2>
-
-    
-          {/* Main Sponsor */}
-          <div className="sponsor-card glass main-sponsor">
- 
-            <img
-              src="/images/smartOwl.png"
-              alt="Smart Owl"
-              className="sponsor-logo large"
-            />
-            <h3>Smart Owl</h3>
-            <p className="muted">Powering Innovation & Technology</p>
-          </div>
-
-       
-    
+      {" "}
+      <h2 className="section-title">Our Sponsors</h2>
+      <div className="container sponserContainer">
+        {/* Main Sponsor */}
+        <div className="sponsor-card glass main-sponsor">
+          <img
+            src="/images/smartOwl.png"
+            alt="Smart Owl"
+            className="sponsor-logo large"
+          />
+          <h3>Smart Owl</h3>
+          <p className="muted">
+            Empowering lifelong learners with innovative education solutions
+          </p>
+        </div>
+        <div className="sponsor-card glass main-sponsor">
+          <img
+            src="/images/devSource.png"
+            alt="Smart Owl"
+            className="sponsor-logo large"
+          />
+          <h3>Dev Source</h3>
+          <p className="muted">
+            Connecting developers with endless opportunities
+          </p>
+        </div>
       </div>
     </section>
   );
