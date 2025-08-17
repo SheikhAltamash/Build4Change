@@ -24,14 +24,12 @@ const Hero = () => {
               Anjuman College of Engineering and Technology
             </p>{" "}
             <div className="cta-buttons hello">
-              <a
-                href="https://forms.gle/yE9oVqDg7SLCEsYf9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn primary large"
-              >
-                Register Your Team
-              </a>
+               <Link
+                           to="/register"
+                           className="register-btn"
+                         >
+                           Register Now
+                         </Link>
             </div>
           </div>
           <div className="hero-visual">

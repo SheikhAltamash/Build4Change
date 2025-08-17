@@ -87,6 +87,9 @@
     flex-direction: column;
     gap: 12px;
   }
+  .sponserContainer{
+      flex-wrap: wrap;
+  }
 }
 .sponsor-logo{
 width: 5rem !important;
@@ -99,8 +102,10 @@ border-radius: 1rem;
   gap: 1rem;
   padding: 1rem;
   padding-top: 2rem !important;
-  flex-wrap: wrap;
 }
 .sponsor-card{
-  max-width: 400px;
+  max-width: 350px;
+}
+.ieee{
+  width: 180px !important;
 }

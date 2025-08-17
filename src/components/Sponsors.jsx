@@ -30,6 +30,15 @@ const Sponsors = () => {
             Connecting developers with endless opportunities
           </p>
         </div>
+        <div className="sponsor-card glass main-sponsor">
+          <img
+            src="/images/ieee.png"
+            alt="Smart Owl"
+            className="sponsor-logo large ieee"
+          />
+          <h3>IEEE Computer Society</h3>
+          <p className="muted">Shaping the Future of Technology</p>
+        </div>
       </div>
     </section>
   );
