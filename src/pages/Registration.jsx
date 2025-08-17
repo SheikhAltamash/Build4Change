@@ -210,15 +210,8 @@ const Registration = () => {
                 <h4>📧 Email Support</h4>
                 <p>altamashsheikh077@gmail.com</p>
               </div>
-              <div className="contact-item">
-                <h4>💬 WhatsApp Group</h4>
-                <a
-                  href="https://chat.whatsapp.com/FvV6RGds9ef9y36ccxxEaW?mode=ac_t"
-                  className="btn ghost"
-                >
-                  Join Group
-                </a>
-              </div>
+            
+              
             </div>
           </GlassCard>
         </section>
