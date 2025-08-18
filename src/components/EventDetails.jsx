@@ -5,7 +5,7 @@ import "../styles/EventDetails.css";
 const EventDetails = () => {
   const eventInfo = [
     {
-      icon: "📅",
+      icon: "🗓️",
       title: "Date",
       value: "22 August 2025",
       subtitle: "Friday",
