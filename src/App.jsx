@@ -16,8 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Registration />} />
-          {/* <Route path="/problems" element={<ProblemStatements />} />
-          <Route path="/submit" element={<GitHubSubmission />} /> */}
+          <Route path="/problems" element={<ProblemStatements />} />
+          <Route path="/submit" element={<GitHubSubmission />} />
         </Routes>
         <Footer />
       </div>

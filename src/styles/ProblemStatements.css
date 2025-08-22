@@ -1,3 +1,4 @@
+/* ========== Page & Header ========== */
 .problems-page {
   padding: 120px 0 80px;
   min-height: 100vh;
@@ -5,12 +6,12 @@
 
 .problems-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .problems-header h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
   background: linear-gradient(45deg, #ff6b35, #f7931e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -18,131 +19,190 @@
 }
 
 .problems-header p {
-  font-size: 1.2rem;
-  opacity: 0.8;
+  font-size: 1rem;
+  opacity: 0.85;
 }
 
+/* ========== Theme Section ========== */
+.theme-section {
+  margin-bottom: 48px;
+}
+
+.theme-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0 0 18px 0;
+  color: #e9eef7;
+}
+
+.theme-heading::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(255,107,53,.5), rgba(255,107,53,0));
+  opacity: 0.6;
+}
+
+.theme-heading .code {
+  color: #ff8c5a;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ========== Grid (3 / 2 / 1) ========== */
 .problems-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
-.problem-card {
-  padding: 30px;
-  transition: all 0.3s ease;
-  height: fit-content;
+@media (max-width: 1024px) {
+  .problems-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.problem-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(31, 38, 135, 0.5);
-}
-
-.problem-header {
-  margin-bottom: 20px;
-}
-
-.problem-header h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #4fc3f7;
-}
-
-.problem-meta {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.theme-tag {
-  background: rgba(79, 195, 247, 0.2);
-  color: #4fc3f7;
-  padding: 5px 12px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  border: 1px solid rgba(79, 195, 247, 0.3);
-}
-
-.difficulty-tag {
-  color: white;
-  padding: 5px 12px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.problem-description {
-  margin-bottom: 25px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-.problem-requirements {
-  margin-bottom: 25px;
-}
-
-.problem-requirements h4 {
-  color: #ff6b35;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.problem-requirements ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.problem-requirements li {
-  margin-bottom: 8px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.problem-requirements li:before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #4caf50;
-  font-weight: bold;
-}
-
-.tech-suggestions h4 {
-  color: #ff6b35;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tech-tag {
-  background: rgba(255, 107, 53, 0.2);
-  color: #ff6b35;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  border: 1px solid rgba(255, 107, 53, 0.3);
+@media (max-width: 640px) {
+  .problems-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 768px) {
   .problems-page {
-    padding: 100px 0 60px;
+    padding: 90px 0 60px;
   }
-
-  .problems-header h1 {
-    font-size: 2rem;
-  }
-
-  .problems-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .problem-card {
-    padding: 20px;
+  .theme-heading{
+font-size: 1.2rem;
   }
 }
+
+/* ========== Card ========== */
+.problem-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px;
+  border: 1px solid transparent;      /* unified border model */
+  border-left-width: 3px;              /* subtle theme accent on left */
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(31, 38, 135, 0.40);
+}
+
+/* Header */
+.problem-header {
+  margin-bottom: 12px;
+}
+
+.problem-header h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+  color: #e7f4ff;
+  display: block;          /* ensure no clamp/truncation */
+  overflow: visible;
+}
+
+/* Meta */
+.problem-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.theme-tag {
+  background: rgba(79, 195, 247, 0.16);
+  color: #7dd3fc;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  border: 1px solid rgba(79, 195, 247, 0.28);
+}
+
+/* Description (no clamp) */
+.problem-description {
+  margin-top: 8px;
+  color: #d6e7f0;
+  opacity: 0.9;
+  line-height: 1.55;
+  font-size: 0.94rem;
+  display: block;
+  overflow: visible;
+}
+
+/* Ensure all cards stretch uniformly */
+.problems-grid > .glass-card.problem-card {
+  height: 100%;
+}
+
+/* ========== Theme Colors ========== */
+:root {
+  --hi: #ef4444;  /* Healthcare Innovation */
+  --et: #3b82f6;  /* Education Technology */
+  --es: #22c55e;  /* Environmental Sustainability */
+  --sc: #a855f7;  /* Smart Cities */
+  --fi: #f59e0b;  /* Financial Inclusion */
+  --si: #ec4899;  /* Social Impact */
+
+  --hi-t: rgba(239, 68, 68, 0.18);
+  --et-t: rgba(59, 130, 246, 0.18);
+  --es-t: rgba(34, 197, 94, 0.18);
+  --sc-t: rgba(168, 85, 247, 0.18);
+  --fi-t: rgba(245, 158, 11, 0.18);
+  --si-t: rgba(236, 72, 153, 0.18);
+}
+
+/* Theme left-border accent + hover glow */
+.theme-HI { border-left-color: var(--hi); }
+.theme-ET { border-left-color: var(--et); }
+.theme-ES { border-left-color: var(--es); }
+.theme-SC { border-left-color: var(--sc); }
+.theme-FI { border-left-color: var(--fi); }
+.theme-SI { border-left-color: var(--si); }
+
+.theme-HI:hover { box-shadow: 0 14px 36px rgba(239,68,68,0.15); }
+.theme-ET:hover { box-shadow: 0 14px 36px rgba(59,130,246,0.15); }
+.theme-ES:hover { box-shadow: 0 14px 36px rgba(34,197,94,0.15); }
+.theme-SC:hover { box-shadow: 0 14px 36px rgba(168,85,247,0.15); }
+.theme-FI:hover { box-shadow: 0 14px 36px rgba(245,158,11,0.15); }
+.theme-SI:hover { box-shadow: 0 14px 36px rgba(236,72,153,0.15); }
+
+/* ========== Short ID Badge ========== */
+.short-id {
+  display: inline-block;
+  font-weight: 800;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin-right: 8px;
+  letter-spacing: 0.5px;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  border: 1px solid transparent;
+}
+
+/* Theme-specific badge background + border */
+.theme-HI .short-id { background: var(--hi-t); border-color: var(--hi); }
+.theme-ET .short-id { background: var(--et-t); border-color: var(--et); }
+.theme-ES .short-id { background: var(--es-t); border-color: var(--es); }
+.theme-SC .short-id { background: var(--sc-t); border-color: var(--sc); }
+.theme-FI .short-id { background: var(--fi-t); border-color: var(--fi); }
+.theme-SI .short-id { background: var(--si-t); border-color: var(--si); }
+
+/* Intensify on card hover */
+.theme-HI:hover .short-id { background: rgba(239,68,68,0.28); box-shadow: 0 0 16px rgba(239,68,68,0.25); }
+.theme-ET:hover .short-id { background: rgba(59,130,246,0.28); box-shadow: 0 0 16px rgba(59,130,246,0.25); }
+.theme-ES:hover .short-id { background: rgba(34,197,94,0.28); box-shadow: 0 0 16px rgba(34,197,94,0.25); }
+.theme-SC:hover .short-id { background: rgba(168,85,247,0.28); box-shadow: 0 0 16px rgba(168,85,247,0.25); }
+.theme-FI:hover .short-id { background: rgba(245,158,11,0.28); box-shadow: 0 0 16px rgba(245,158,11,0.25); }
+.theme-SI:hover .short-id { background: rgba(236,72,153,0.28); box-shadow: 0 0 16px rgba(236,72,153,0.25); }

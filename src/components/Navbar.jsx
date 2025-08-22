@@ -32,10 +32,10 @@ const Navbar = () => {
             <Link to="/" onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
-            {/* <Link to="/problems" onClick={() => setIsMenuOpen(false)}>
+           {/* <Link to="/problems" onClick={() => setIsMenuOpen(false)}>
               Problems
-            </Link>
-            <Link to="/submit" onClick={() => setIsMenuOpen(false)}>
+            </Link> */}
+              {/*<Link to="/submit" onClick={() => setIsMenuOpen(false)}>
               Submit
             </Link> */}
             <Link
